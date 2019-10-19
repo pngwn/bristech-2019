@@ -69,7 +69,5 @@
 <svelte:body on:keypress={handle_click} />
 
 <Pixi background="#222" margin={15} on:click={() => console.log('clicked')}>
-	<PixiGraphics>
-		<PixiCircle positions={$pos} colors={$col} />
-	</PixiGraphics>
+	<PixiCircle positions={$pos} colors={$col} />
 </Pixi>

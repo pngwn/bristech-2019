@@ -71,7 +71,5 @@
 	width={meta[0] * 2.5}
 	height={meta[1] * 2.5}
 	background="#333">
-	<!-- <PixiGraphics> -->
 	<PixiSquare positions={$pos} colors={col} size={9} />
-	<!-- </PixiGraphics> -->
 </Pixi>
