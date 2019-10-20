@@ -1,4 +1,6 @@
 <script context="module">
+	import * as PIXI from "pixi.js";
+
 	const generateSquareTexture = (renderer, size, color) => {
 		const gfx = new PIXI.Graphics();
 		const texture = PIXI.RenderTexture.create(size, size);
@@ -14,8 +16,6 @@
 
 <script>
 	import { getContext } from "svelte";
-	import * as PIXI from "pixi.js";
-
 	import { lerp } from "~math/interpolate";
 
 	import { _PIXI } from "./Pixi.svelte";

@@ -12,9 +12,9 @@ export default {
 	input: "src/main.js",
 	output: {
 		sourcemap: true,
-		format: "iife",
+		format: "esm",
 		name: "app",
-		file: "public/bundle.js",
+		dir: "public/bundle",
 	},
 	plugins: [
 		svelte({
