@@ -12,12 +12,11 @@
 		},
 		"/dots": async () =>
 			(component = (await import("./slides/_ImageDots.svelte")).default),
+		"/actions": async () =>
+			(component = (await import("./slides/Actions.svelte")).default),
 	};
 
 	onMount(() => router(routes));
 </script>
 
 <svelte:component this={component} />
-<p>
-	<a href="/dots">Dots</a>
-</p>

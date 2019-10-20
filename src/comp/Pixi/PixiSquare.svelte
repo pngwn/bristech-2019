@@ -36,11 +36,10 @@
 			({ position: _position, radius: _r, alpha }, i) => {
 				const squareSprite = new PIXI.Sprite(square);
 
+				squareSprite.anchor.set(0.5);
 				squareSprite.x = lerp(margin, width - margin, _position[0]);
 				squareSprite.y = lerp(margin, height - margin, _position[1]);
 				squareSprite.tint = _colors[i];
-				squareSprite.scale.set(_r);
-				squareSprite.alpha = alpha;
 
 				return squareSprite;
 			},
@@ -65,8 +64,6 @@
 			squareSprite.x = lerp(margin, width - margin, positions[i].position[0]);
 			squareSprite.y = lerp(margin, height - margin, positions[i].position[1]);
 			squareSprite.tint = colors[i];
-			squareSprite.scale.set(positions[i].radius);
-			squareSprite.alpha = positions[i].alpha;
 		});
 	}
 

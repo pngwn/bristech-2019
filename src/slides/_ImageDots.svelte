@@ -4,7 +4,7 @@
 	import { lerp_color, rgb_to_hex } from "~math/interpolate";
 	import { shuffle } from "~math/random";
 
-	import { Pixi, PixiSquare } from "../comp/Pixi/";
+	import { Pixi, PixiCircle } from "../comp/Pixi/";
 	import { einstein } from "../../scripts/processed/einstein.js";
 
 	const { data, meta } = einstein;
@@ -46,13 +46,11 @@
 	};
 
 	let pos = animation(
-		shuffle(
-			_pos.map(v => ({
-				...v,
-				position: get_random_oob(),
-				alpha: 0,
-			})),
-		),
+		_pos.map(v => ({
+			...v,
+			position: get_random_oob(),
+			alpha: 0,
+		})),
 		{
 			duration: 5500,
 			delay: (_, __, { i }) => i,
@@ -71,5 +69,5 @@
 	width={meta[0] * 2.5}
 	height={meta[1] * 2.5}
 	background="#333">
-	<PixiSquare positions={$pos} colors={col} size={9} />
+	<PixiCircle positions={$pos} colors={col} radius={2.5} />
 </Pixi>
