@@ -1,6 +1,8 @@
 {
-	"name": "svelte-app",
-	"version": "1.0.0",
+	"name": "bristech-2019",
+	"version": "0.0.1",
+	"license": "MIT",
+	"author": "pngwn <hello@pngwn.io>",
 	"devDependencies": {
 		"@sveltejs/svelte-repl": "^0.1.9",
 		"esm": "^3.2.25",
@@ -25,11 +27,14 @@
 		"sirv-cli": "^0.4.4"
 	},
 	"scripts": {
-		"build": "rollup -c",
+		"build": "yarn run-scripts && rollup -c",
 		"autobuild": "rollup -c -w",
-		"dev": "run-p start:dev autobuild",
+		"dev": "yarn run-scripts && run-p start:dev autobuild",
 		"start": "sirv public --single",
 		"start:dev": "sirv public --single --dev",
-		"copy-workers": "rm -rf public/workers && cp -r node_modules/@sveltejs/svelte-repl/workers public"
+		"process-images": "node -r esm scripts/process_images.js",
+		"generate-samples": "node -r esm scripts/stringify_samples.js",
+		"copy-workers": "rm -rf public/workers && cp -r node_modules/@sveltejs/svelte-repl/workers public",
+		"run-scripts": "yarn copy-workers && yarn process-images && yarn generate-samples"
 	}
 }
