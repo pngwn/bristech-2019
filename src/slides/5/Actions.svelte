@@ -48,5 +48,5 @@
 </style>
 
 <div class="viewport">
-	<Repl bind:this={repl} workersUrl="workers" />
+	<Repl bind:this={repl} workersUrl="workers" svelteUrl="/packages/svelte" />
 </div>
