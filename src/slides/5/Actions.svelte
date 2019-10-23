@@ -3,7 +3,7 @@
 	import { onMount } from "svelte";
 	import Repl from "@sveltejs/svelte-repl";
 
-	import content from "../samples/actions/";
+	import content from "../../samples/actions/";
 
 	let repl;
 
@@ -48,5 +48,9 @@
 </style>
 
 <div class="viewport">
-	<Repl bind:this={repl} workersUrl="workers" svelteUrl="/packages/svelte" />
+	<Repl
+		bind:this={repl}
+		workersUrl="workers"
+		svelteUrl="http://localhost:5000/packages/svelte"
+		packagesUrl="http://localhost:5000/packages" />
 </div>

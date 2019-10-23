@@ -12,8 +12,8 @@
 		},
 		"/dots": async () =>
 			(component = (await import("./slides/_ImageDots.svelte")).default),
-		"/actions": async () =>
-			(component = (await import("./slides/Actions.svelte")).default),
+		"/5-actions": async () =>
+			(component = (await import("./slides/5/Actions.svelte")).default),
 	};
 
 	onMount(() => router(routes));

@@ -461,9 +461,9 @@ function create_animation(node, from, fn, params) {
     const to = node.getBoundingClientRect();
     if (from.left === to.left && from.right === to.right && from.top === to.top && from.bottom === to.bottom)
         return noop;
-    const { delay = 0, duration = 300, easing = identity, 
+    const { delay = 0, duration = 300, easing = identity,
     // @ts-ignore todo: should this be separated from destructuring? Or start/end added to public api and documentation?
-    start: start_time = exports.now() + delay, 
+    start: start_time = exports.now() + delay,
     // @ts-ignore todo:
     end = start_time + duration, tick = noop, css } = fn(node, { from, to }, params);
     let running = true;
