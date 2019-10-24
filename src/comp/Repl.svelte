@@ -14,6 +14,14 @@
 	});
 </script>
 
+<div class="viewport">
+	<Repl
+		bind:this={repl}
+		workersUrl="workers"
+		svelteUrl="http://localhost:5000/packages/svelte"
+		packagesUrl="http://localhost:5000/packages" />
+</div>
+
 <style>
 	:global(body) {
 		background: #333;
@@ -46,11 +54,3 @@
 		visibility: visible;
 	}
 </style>
-
-<div class="viewport">
-	<Repl
-		bind:this={repl}
-		workersUrl="workers"
-		svelteUrl="http://localhost:5000/packages/svelte"
-		packagesUrl="http://localhost:5000/packages" />
-</div>

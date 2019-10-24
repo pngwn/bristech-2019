@@ -13,15 +13,15 @@
 	];
 </script>
 
-<style>
-	:global(body) {
-		text-align: center;
-	}
-</style>
-
 <h1>Types of Penguin?</h1>
 
 {#each penguins as { type, image }}
 	<h2>{type}</h2>
 	<img src={image} />
 {/each}
+
+<style>
+	:global(body) {
+		text-align: center;
+	}
+</style>

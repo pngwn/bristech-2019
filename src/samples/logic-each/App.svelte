@@ -2,12 +2,6 @@
 	let is_penguin;
 </script>
 
-<style>
-	:global(body) {
-		text-align: center;
-	}
-</style>
-
 <h1>Are you a penguin?</h1>
 <button on:click={() => (is_penguin = true)}>Yes</button>
 <button on:click={() => (is_penguin = false)}>No</button>
@@ -19,3 +13,9 @@
 {:else}
 	<h2>Shame.</h2>
 {/if}
+
+<style>
+	:global(body) {
+		text-align: center;
+	}
+</style>

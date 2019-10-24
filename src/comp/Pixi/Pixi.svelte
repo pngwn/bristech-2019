@@ -33,6 +33,13 @@
 	});
 </script>
 
+<div
+	bind:this={container}
+	class="container"
+	on:click
+	style="background-color:{background}" />
+<slot />
+
 <style>
 	:global(body) {
 		margin: 0;
@@ -47,10 +54,3 @@
 		bottom: 0;
 	}
 </style>
-
-<div
-	bind:this={container}
-	class="container"
-	on:click
-	style="background-color:{background}" />
-<slot />
