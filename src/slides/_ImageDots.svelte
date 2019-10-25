@@ -9,6 +9,9 @@
 
 	const { data, meta } = einstein;
 
+	export let done;
+	export const next = () => done();
+
 	const _cols = data.map(v => v.map(({ col }) => col));
 
 	const bg_col = parseInt(rgb_to_hex(...data[0][0].col).replace("#", "0x"), 16);

@@ -1,4 +1,3 @@
 {
-	"main": "./index",
-	"module": "./index.mjs"
+	"module": "./index.js"
 }

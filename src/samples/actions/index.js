@@ -3,7 +3,7 @@ export default [
   {
     "type": "svelte",
     "name": "App",
-    "source": "<script>\n\timport { pengwinning } from \"./actions.js\";\n</script>\n\n<style>\n\th1 {\n\t\ttext-align: center;\n\t}\n\n\t:global(body) {\n\t\tbackground: #cbdbfc;\n\t}\n</style>\n\n<h1 use:pengwinning>Penguin?</h1>\n"
+    "source": "<script>\n\timport { pengwinning } from \"./actions.js\";\n</script>\n\n<h1 use:pengwinning>Penguin?</h1>\n\n<style>\n\th1 {\n\t\ttext-align: center;\n\t}\n\n\t:global(body) {\n\t\tbackground: #cbdbfc;\n\t}\n</style>\n"
   },
   {
     "type": "js",
