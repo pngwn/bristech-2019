@@ -18,7 +18,8 @@
 	<Repl
 		bind:this={repl}
 		workersUrl="workers"
-		packagesUrl="/packages"
+		svelteUrl="http://localhost:5000/packages/svelte"
+		packagesUrl="/packages/"
 		relaxed={true} />
 </div>
 

@@ -11,6 +11,10 @@ import BindGroup from "./slides/5/BindGroup.svelte";
 import BindComponent from "./slides/5/BindComponent.svelte";
 import BindMedia from "./slides/5/BindMedia.svelte";
 import Actions from "./slides/5/Actions.svelte";
+import Stores from "./slides/5/Stores.svelte";
+import StoresCustom from "./slides/5/StoresCustom.svelte";
+
+import ReactivityBlackboard from "./slides/2/ReactivityBlackboard.svelte";
 
 export const routes = [
 	// Part 1 - Intro
@@ -19,7 +23,7 @@ export const routes = [
 	// Part 4 - Who Cares?
 	["/", Intro],
 	["/dots", ImageDots],
-
+	["/2-reactivity-basics", ReactivityBlackboard],
 	// Part 5 - Svelte API
 	["/5-basics", Basics],
 	["/5-logic-if", LogicEach],
@@ -32,6 +36,7 @@ export const routes = [
 	["/5-bind-component", BindComponent],
 	["/5-bind-media", BindMedia],
 	["/5-actions", Actions],
-
+	["/5-stores", Stores],
+	["/5-stores-custom", StoresCustom],
 	// Outro - Resources and Me
 ];
