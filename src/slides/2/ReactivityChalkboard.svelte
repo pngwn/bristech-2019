@@ -6,6 +6,8 @@
 	import Ambulance from "../../comp/drawings/Ambulance.svelte";
 	import Circle from "../../comp/drawings/Circle.svelte";
 
+	export let done;
+
 	let things = {
 		houses: Array(3).fill(false),
 		dogs: Array(3).fill(false),

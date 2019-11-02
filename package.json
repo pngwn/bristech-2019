@@ -25,7 +25,9 @@
 		"svelte-feather-icons": "^2.0.0"
 	},
 	"dependencies": {
-		"sirv-cli": "^0.4.4"
+		"sirv-cli": "^0.4.4",
+		"typeface-fira-mono": "^0.0.72",
+		"typeface-lato": "^0.0.75"
 	},
 	"scripts": {
 		"build": "yarn run-scripts && rollup -c",

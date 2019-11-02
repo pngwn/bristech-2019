@@ -14,7 +14,9 @@ import Actions from "./slides/5/Actions.svelte";
 import Stores from "./slides/5/Stores.svelte";
 import StoresCustom from "./slides/5/StoresCustom.svelte";
 
-import ReactivityBlackboard from "./slides/2/ReactivityBlackboard.svelte";
+import ReactivityChalkboard from "./slides/2/ReactivityChalkboard.svelte";
+import ReactivitySpreadsheet from "./slides/2/ReactivitySpreadsheet.svelte";
+import ReactivityClock from "./slides/2/ReactivityClock.svelte";
 
 export const routes = [
 	// Part 1 - Intro
@@ -23,7 +25,9 @@ export const routes = [
 	// Part 4 - Who Cares?
 	["/", Intro],
 	["/dots", ImageDots],
-	["/2-reactivity-basics", ReactivityBlackboard],
+	["/2-reactivity-basics", ReactivityChalkboard],
+	["/2-reactivity-spreadsheet", ReactivitySpreadsheet],
+	["/2-reactivity-clock", ReactivityClock],
 	// Part 5 - Svelte API
 	["/5-basics", Basics],
 	["/5-logic-if", LogicEach],
