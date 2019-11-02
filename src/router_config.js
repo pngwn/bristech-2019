@@ -14,6 +14,8 @@ import Actions from "./slides/5/Actions.svelte";
 import Stores from "./slides/5/Stores.svelte";
 import StoresCustom from "./slides/5/StoresCustom.svelte";
 
+import VirtualDom from "./slides/1/VirtualDom.svelte";
+
 import ReactivityChalkboard from "./slides/2/ReactivityChalkboard.svelte";
 import ReactivitySpreadsheet from "./slides/2/ReactivitySpreadsheet.svelte";
 import ReactivityClock from "./slides/2/ReactivityClock.svelte";
@@ -22,8 +24,11 @@ export const routes = [
 	// Part 1 - Intro
 	// Part 2 - Updating the DOM
 	// Part 3 - Reactivity
-	// Part 4 - Who Cares?
 	["/", Intro],
+	// Part 1 - Updating the DOM
+	//["/1-shape-model", ShapeModel],
+	["/1-virtual-dom", VirtualDom],
+	// Part 2 - Reactivity
 	["/dots", ImageDots],
 	["/2-reactivity-basics", ReactivityChalkboard],
 	["/2-reactivity-spreadsheet", ReactivitySpreadsheet],
