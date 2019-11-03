@@ -15,6 +15,7 @@
 		let cmd = false;
 
 		const handle_down = ({ which }) => {
+			if (which === 39) cb();
 			if (which === 91) cmd = true;
 			if (cmd && which === 75) cb();
 		};

@@ -14,7 +14,7 @@
 	});
 </script>
 
-<div class="viewport">
+<div class="viewport" on:keydown|stopPropagation>
 	<Repl
 		bind:this={repl}
 		workersUrl="workers"
