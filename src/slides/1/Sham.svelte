@@ -44,7 +44,6 @@
 	export let done;
 
 	const timer = delay => new Promise(res => setTimeout(res, delay));
-	let running = false;
 
 	let current = 0;
 	const move = [
@@ -72,39 +71,31 @@
 		() => (v_sham_obj[1] = ["Square", "Orange", id++]),
 		() => (sync.show = true),
 		async () => {
-			running = true;
 			sync.r = 720;
 			await timer(5000);
 			sync_status = "match";
-			running = false;
 		},
 		() => (sham_obj[0][3] = "same"),
 		async () => {
-			running = true;
 			sync.p = -20;
 			await timer(5000);
 			sync.r += 720;
 			await timer(5000);
 			sync_status = "dirty";
-			running = false;
 		},
 		() => (sham_obj[1][3] = "change"),
 		async () => {
-			running = true;
 			sync.p = 85;
 			await timer(5000);
 			sync.r += 720;
 			await timer(5000);
 			sync_status = "match";
-			running = false;
 		},
 		async () => {
-			running = true;
 			sham_obj[2][3] = "same";
 			sync.show = false;
 			await timer(1000);
 			sync.p = -120;
-			running = false;
 			sync_status = "";
 		},
 		() => {
@@ -122,31 +113,25 @@
 		},
 		() => (sync.show = true),
 		async () => {
-			running = true;
 			sync.r += 720;
 			await timer(5000);
 			sync_status = "dirty";
-			running = false;
 		},
 		() => (sham_obj[0][3] = "change"),
 		async () => {
-			running = true;
 			sync.p = -20;
 			await timer(5000);
 			sync.r += 720;
 			await timer(5000);
 			sync_status = "match";
-			running = false;
 		},
 		() => (sham_obj[1][3] = "same"),
 		async () => {
-			running = true;
 			sync.p = 85;
 			await timer(5000);
 			sync.r += 720;
 			await timer(5000);
 			sync_status = "patch";
-			running = false;
 		},
 		() => {
 			sham_obj[2][3] = "edit";
@@ -173,10 +158,14 @@
 		css: t => `opacity: ${t};`,
 	});
 
-	export const next = () => !running && move[current++]();
+	export const next = () => move[current++]();
+
+	let w;
 </script>
 
-<div class="container">
+<svelte:window bind:innerWidth={w} />
+
+<div class="container" out:fly={{ x: 0 - w, duration: 1000 }}>
 	{#if show_sham}
 		<div
 			in:fly={{ y: 300 }}

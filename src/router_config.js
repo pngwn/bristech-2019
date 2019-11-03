@@ -15,7 +15,9 @@ import Stores from "./slides/5/Stores.svelte";
 import StoresCustom from "./slides/5/StoresCustom.svelte";
 
 import Ebbinghaus from "./slides/1/Ebbinghaus.svelte";
+
 import Sham from "./slides/1/Sham.svelte";
+import HTMLStructure from "./slides/1/HTMLStructure.svelte";
 
 import VirtualDom from "./slides/1/VirtualDom.svelte";
 
@@ -31,6 +33,7 @@ export const routes = [
 	// Part 1 - Updating the DOM
 	//["/1-shape-model", ShapeModel],
 	["/1-sham", Sham],
+	["/1-html-structure", HTMLStructure],
 	["/1-ebbinghaus", Ebbinghaus],
 	["/1-virtual-dom", VirtualDom],
 	// Part 2 - Reactivity
