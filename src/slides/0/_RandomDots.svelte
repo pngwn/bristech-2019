@@ -6,7 +6,10 @@
 	import { rangeFloor, shuffle, pick } from "~math/random";
 	import { lerp, lerp_color } from "~math/interpolate";
 
-	import { Pixi, PixiCircle } from "../comp/Pixi/";
+	import { Pixi, PixiCircle } from "../../comp/Pixi/";
+
+	export let done;
+	export const next = done;
 
 	const h = Math.round(window.innerHeight / 10);
 	const w = Math.round(window.innerWidth / 10);

@@ -30,6 +30,10 @@
 		app.view.style.position = "absolute";
 		app.view.style.right = 0;
 		app.view.style.bottom = 0;
+
+		return () => {
+			app.destroy(true, true);
+		};
 	});
 </script>
 

@@ -1,6 +1,6 @@
 import Intro from "./slides/01_Intro.svelte";
 import ImageDots from "./slides/_ImageDots.svelte";
-import RandomDots from "./slides/_RandomDots.svelte";
+import RandomDots from "./slides/0/_RandomDots.svelte";
 
 import Basics from "./slides/5/Basics.svelte";
 import LogicEach from "./slides/5/LogicEach.svelte";
