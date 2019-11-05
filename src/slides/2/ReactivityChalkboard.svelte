@@ -1,10 +1,10 @@
 <script>
-	import House from "../../comp/drawings/House.svelte";
-	import Dog from "../../comp/drawings/Dog.svelte";
-	import Reactivity from "../../comp/drawings/Reactivity.svelte";
-	import Road from "../../comp/drawings/Road.svelte";
-	import Ambulance from "../../comp/drawings/Ambulance.svelte";
-	import Circle from "../../comp/drawings/Circle.svelte";
+	import House from "../../comp/Drawings/House.svelte";
+	import Dog from "../../comp/Drawings/Dog.svelte";
+	import Reactivity from "../../Domp/drawings/Reactivity.svelte";
+	import Road from "../../comp/Drawings/Road.svelte";
+	import Ambulance from "../../comp/Drawings/Ambulance.svelte";
+	import Circle from "../../comp/Drawings/Circle.svelte";
 
 	export let done;
 
