@@ -1,7 +1,7 @@
 <script>
 	import House from "../../comp/Drawings/House.svelte";
 	import Dog from "../../comp/Drawings/Dog.svelte";
-	import Reactivity from "../../Domp/drawings/Reactivity.svelte";
+	import Reactivity from "../../comp/Drawings/Reactivity.svelte";
 	import Road from "../../comp/Drawings/Road.svelte";
 	import Ambulance from "../../comp/Drawings/Ambulance.svelte";
 	import Circle from "../../comp/Drawings/Circle.svelte";
