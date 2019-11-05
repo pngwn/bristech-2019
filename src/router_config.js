@@ -32,7 +32,7 @@ import Title from "./slides/0/Title.svelte";
 
 import Sham from "./slides/1/Sham.svelte";
 import HTMLStructure from "./slides/1/HTMLStructure.svelte";
-import VirtualDom from "./slides/1/VirtualDom.svelte";
+import VirtualDOM from "./slides/1/VirtualDOM.svelte";
 import Svelte from "./slides/1/Svelte.svelte";
 import SvelterUpdates from "./slides/1/SvelterUpdates.svelte";
 import How from "./slides/1/How.svelte";
@@ -54,7 +54,7 @@ export const routes = [
 	["/1-sham", Sham],
 	["/1-html-structure", HTMLStructure],
 	// ["/1-ebbinghaus", Ebbinghaus],
-	["/1-virtual-dom", VirtualDom],
+	["/1-virtual-dom", VirtualDOM],
 	["/1-svelte", Svelte],
 	["/1-svelter-updates", SvelterUpdates],
 	["/1-how", How],
