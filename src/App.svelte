@@ -12,25 +12,25 @@
 	const done = () => route(routes[current() + 1][0]);
 
 	const cmd_k = (node, cb) => {
-		let cmd = false;
+		// let cmd = false;
 
 		const handle_down = ({ which }) => {
 			if (which === 39) cb();
-			if (which === 91) cmd = true;
-			if (cmd && which === 75) cb();
+			// if (which === 91) cmd = true;
+			// if (cmd && which === 75) cb();
 		};
 
-		const handle_up = ({ which }) => {
-			if (which === 91) cmd = false;
-		};
+		// const handle_up = ({ which }) => {
+		// 	if (which === 91) cmd = false;
+		// };
 
 		node.addEventListener("keydown", handle_down);
-		node.addEventListener("keyup", handle_up);
+		// node.addEventListener("keyup", handle_up);
 
 		return {
 			destroy: () => {
 				node.removeEventListener("keydown", handle_down);
-				node.removeEventListener("keyup", handle_up);
+				// node.removeEventListener("keyup", handle_up);
 			},
 		};
 	};

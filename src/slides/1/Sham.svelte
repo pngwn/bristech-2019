@@ -39,8 +39,6 @@
 	let sync = { show: false, p: -120, r: 0 };
 	let sync_status = "";
 
-	console.log(sham_letters);
-
 	export let done;
 
 	const timer = delay => new Promise(res => setTimeout(res, delay));
@@ -68,44 +66,45 @@
 			await timer(1000);
 			show_v_sham = true;
 		},
-		() => (v_sham_obj[1] = ["Square", "Orange", id++]),
-		() => (sync.show = true),
-		async () => {
-			sync.r = 720;
-			await timer(5000);
-			sync_status = "match";
-		},
-		() => (sham_obj[0][3] = "same"),
-		async () => {
-			sync.p = -20;
-			await timer(5000);
-			sync.r += 720;
-			await timer(5000);
-			sync_status = "dirty";
-		},
-		() => (sham_obj[1][3] = "change"),
-		async () => {
-			sync.p = 85;
-			await timer(5000);
-			sync.r += 720;
-			await timer(5000);
-			sync_status = "match";
-		},
-		async () => {
-			sham_obj[2][3] = "same";
-			sync.show = false;
-			await timer(1000);
-			sync.p = -120;
-			sync_status = "";
-		},
-		() => {
-			sham_obj[0][3] = "";
-			sham_obj[1] = ["Square", "Orange", id++, ""];
-			sham_obj[2][3] = "";
-		},
-		() => {
-			shapes[1] = { comp: SquareIcon, color: "orange", id: id++ };
-		},
+
+		// () => (v_sham_obj[1] = ["Square", "Orange", id++]),
+		// () => (sync.show = true),
+		// async () => {
+		// 	sync.r = 720;
+		// 	await timer(5000);
+		// 	sync_status = "match";
+		// },
+		// () => (sham_obj[0][3] = "same"),
+		// async () => {
+		// 	sync.p = -20;
+		// 	await timer(5000);
+		// 	sync.r += 720;
+		// 	await timer(5000);
+		// 	sync_status = "dirty";
+		// },
+		// () => (sham_obj[1][3] = "change"),
+		// async () => {
+		// 	sync.p = 85;
+		// 	await timer(5000);
+		// 	sync.r += 720;
+		// 	await timer(5000);
+		// 	sync_status = "match";
+		// },
+		// async () => {
+		// 	sham_obj[2][3] = "same";
+		// 	sync.show = false;
+		// 	await timer(1000);
+		// 	sync.p = -120;
+		// 	sync_status = "";
+		// },
+		// () => {
+		// 	sham_obj[0][3] = "";
+		// 	sham_obj[1] = ["Square", "Orange", id++, ""];
+		// 	sham_obj[2][3] = "";
+		// },
+		// () => {
+		// 	shapes[1] = { comp: SquareIcon, color: "orange", id: id++ };
+		// },
 		// and again
 		() => {
 			v_sham_obj[0] = ["Hexagon", "Green", id++];
@@ -137,14 +136,14 @@
 			sham_obj[2][3] = "edit";
 			sync.show = false;
 		},
-		() => (shapes[0] = { comp: HexagonIcon, color: "limegreen", id: id++ }),
-		() => (shapes[2].color = "magenta"),
 		() => {
 			sham_obj[0] = ["Hexagon", "Green", id++, ""];
 			sham_obj[1][3] = "";
 			sham_obj[2][1] = "Magenta";
 			sham_obj[2][3] = "";
 		},
+		() => (shapes[0] = { comp: HexagonIcon, color: "limegreen", id: id++ }),
+		() => (shapes[2].color = "magenta"),
 
 		// end
 		() => done(),

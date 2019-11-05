@@ -3453,6 +3453,11 @@ typeface-lato@^0.0.75:
   resolved "https://registry.yarnpkg.com/typeface-lato/-/typeface-lato-0.0.75.tgz#8aa11c5611dc38416837c089b265a2abd1f7dd31"
   integrity sha512-iA5uJD4PSTyIE4BDiSOexQeXkDkiJuX4Hu3wh3saJ06EB2TvJayab1Lbbmqq2je/LQv7KCQZHZmC0k4hedd8sw==
 
+typeface-overpass@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-overpass/-/typeface-overpass-0.0.72.tgz#d1f92deeacd6745cedcc0478923b6b0c7360c897"
+  integrity sha512-WEFhNZFDdJirSgCJQAuuCGPGSRXKiSM/HGLnA4bXYvE5tELXGrKph1v4NuSDQcsUJKvN8t8iZZmclkd069gPVA==
+
 union-value@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/union-value/-/union-value-1.0.1.tgz#0b6fe7b835aecda61c6ea4d4f02c14221e109847"

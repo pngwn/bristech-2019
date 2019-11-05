@@ -22,7 +22,8 @@
 		"rollup-plugin-svelte": "^5.0.3",
 		"rollup-plugin-terser": "^4.0.4",
 		"svelte": "^3.12.1",
-		"svelte-feather-icons": "^2.0.0"
+		"svelte-feather-icons": "^2.0.0",
+		"typeface-overpass": "^0.0.72"
 	},
 	"dependencies": {
 		"sirv-cli": "^0.4.4",

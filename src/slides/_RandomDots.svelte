@@ -6,7 +6,7 @@
 	import { rangeFloor, shuffle, pick } from "~math/random";
 	import { lerp, lerp_color } from "~math/interpolate";
 
-	import { Pixi, PixiGraphics, PixiCircle } from "./comp/Pixi/";
+	import { Pixi, PixiCircle } from "../comp/Pixi/";
 
 	const h = Math.round(window.innerHeight / 10);
 	const w = Math.round(window.innerWidth / 10);
@@ -47,27 +47,25 @@
 	});
 
 	async function handle_click({ key }) {
-		if (key === "k") {
-			grid = createGrid();
-			pos.set(grid.map(getPositions), {
-				delay: i => i / 20,
-				duration: () => (a, b) => {
-					return (
-						1500 +
-						10 *
-							Math.sqrt(
-								a.position[0] * b.position[0] + a.position[1] + b.position[1],
-							)
-					);
-				},
-			});
-			col.set(grid.map(getColors), { delay: i => i / 20 });
-		}
+		grid = createGrid();
+		pos.set(grid.map(getPositions), {
+			delay: i => i / 20,
+			duration: () => (a, b) => {
+				return (
+					1500 +
+					10 *
+						Math.sqrt(
+							a.position[0] * b.position[0] + a.position[1] + b.position[1],
+						)
+				);
+			},
+		});
+		col.set(grid.map(getColors), { delay: i => i / 20 });
 	}
 </script>
 
 <svelte:body on:keypress={handle_click} />
 
-<Pixi background="#222" margin={15} on:click={() => console.log('clicked')}>
-	<PixiCircle positions={$pos} colors={$col} />
+<Pixi background="#222" margin={15} on:click={handle_click}>
+	<PixiCircle positions={$pos} colors={$col} radius={4} />
 </Pixi>

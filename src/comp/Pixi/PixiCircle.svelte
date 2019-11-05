@@ -68,6 +68,7 @@
 		sprites.forEach((circleSprite, i) => {
 			circleSprite.x = lerp(margin, width - margin, positions[i].position[0]);
 			circleSprite.y = lerp(margin, height - margin, positions[i].position[1]);
+			circleSprite.scale.set(positions[i].radius);
 			circleSprite.tint = colors[i];
 		});
 	}

@@ -7,7 +7,7 @@
 	} from "./list.js";
 
 	let list = make_list();
-	let id = list[0] + 1;
+	let id = list[list.length - 1] + 1;
 
 	const add = () => (list = add_random(list, id++));
 	const remove = () => (list = remove_random(list));
