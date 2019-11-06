@@ -4,6 +4,9 @@
 
 	let logo = false;
 	let type = false;
+	let reposition = false;
+	let comp_fw = false;
+	let bad_bitch = false;
 
 	export let done;
 	let current = 0;
@@ -13,6 +16,9 @@
 			logo = true;
 			setTimeout(() => (type = true), 1500);
 		},
+		() => (reposition = true),
+		() => (comp_fw = true),
+		() => (bad_bitch = true),
 		() => done(),
 	];
 
@@ -23,6 +29,7 @@
 	<div class="logo">
 		{#if logo}
 			<svg
+				class:reposition
 				in:fade={{ duration: 2000 }}
 				xmlns="http://www.w3.org/2000/svg"
 				width="256"
@@ -39,10 +46,23 @@
 			</svg>
 		{/if}
 		{#if type}
-			<div class="text">
+			<div class="text" class:reposition>
 				{#each 'SVELTE'.split('') as l, i}
 					<span in:fly={{ duration: 400, y: 20, delay: i * 200 }}>{l}</span>
 				{/each}
+			</div>
+		{/if}
+
+		{#if comp_fw}
+			<div class="text two" in:fly={{ y: 30 }}>
+				<span>is a component framework</span>
+			</div>
+		{/if}
+
+		{#if bad_bitch}
+			<div class="text two three" in:fly={{ y: 30 }}>
+				<span>by Rich Harris</span>
+				<span class="scholar">(scholar and gentleman)</span>
 			</div>
 		{/if}
 	</div>
@@ -75,6 +95,7 @@
 	svg {
 		width: 100%;
 		height: 100%;
+		transition: 1s;
 	}
 
 	.text {
@@ -88,9 +109,37 @@
 		margin: auto;
 		text-align: center;
 		font-weight: 200;
+		transition: 1s;
 	}
 
 	.text span {
 		display: inline-block;
+	}
+
+	svg.reposition {
+		transform: scale(1.3) translateY(200px);
+		opacity: 0.1;
+	}
+
+	.text.reposition {
+		transform: translateY(-55vh);
+	}
+
+	.two {
+		color: #333;
+		font-size: 5rem;
+		font-weight: 400;
+		letter-spacing: 0.1rem;
+		bottom: 290px;
+	}
+
+	.three {
+		bottom: 110px;
+	}
+
+	.scholar {
+		font-size: 4rem;
+		font-weight: 200;
+		color: #555;
 	}
 </style>

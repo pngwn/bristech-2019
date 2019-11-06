@@ -1,4 +1,6 @@
 <script>
+	import { fade } from "svelte/transition";
+	import { onMount } from "svelte";
 	import N from "noisejs";
 	import palettes from "nice-color-palettes";
 
@@ -49,7 +51,7 @@
 		interpolate: (a, b) => t => lerp_color(a, b, t),
 	});
 
-	async function handle_click({ key }) {
+	async function rejig() {
 		grid = createGrid();
 		pos.set(grid.map(getPositions), {
 			delay: i => i / 20,
@@ -65,10 +67,14 @@
 		});
 		col.set(grid.map(getColors), { delay: i => i / 20 });
 	}
+
+	onMount(() => {
+		const interval = setInterval(rejig, 3000);
+
+		return () => clearInterval(interval);
+	});
 </script>
 
-<svelte:body on:keypress={handle_click} />
-
-<Pixi background="#222" margin={15} on:click={handle_click}>
+<Pixi background="#222" margin={15} transition={fade}>
 	<PixiCircle positions={$pos} colors={$col} radius={4} />
 </Pixi>

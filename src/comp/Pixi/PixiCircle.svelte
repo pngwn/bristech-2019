@@ -31,7 +31,11 @@
 
 	let created = false;
 
-	const { app, margin, width, height } = getContext(_PIXI);
+	const { app, margin, width, height, ww, wh } = getContext(_PIXI);
+
+	let w_diff = ww - width;
+	let h_diff = wh - height;
+
 	const sprites = drawCircle(positions, colors);
 
 	function drawCircle(_positions, _colors) {
@@ -42,8 +46,10 @@
 				const circleSprite = new PIXI.Sprite(circle);
 
 				circleSprite.anchor.set(0.5);
-				circleSprite.x = lerp(margin, width - margin, _position[0]);
-				circleSprite.y = lerp(margin, height - margin, _position[1]);
+				circleSprite.x =
+					w_diff + 50 + lerp(margin, width - margin, _position[0]);
+				circleSprite.y =
+					h_diff / 2 + lerp(margin, height - margin, _position[1]);
 				circleSprite.tint = _colors[i];
 
 				return circleSprite;
@@ -66,8 +72,11 @@
 		if (!created) return;
 		const pivot = sprites[0].width / 2;
 		sprites.forEach((circleSprite, i) => {
-			circleSprite.x = lerp(margin, width - margin, positions[i].position[0]);
-			circleSprite.y = lerp(margin, height - margin, positions[i].position[1]);
+			circleSprite.x =
+				w_diff + 50 + lerp(margin, width - margin, positions[i].position[0]);
+
+			circleSprite.y =
+				h_diff / 2 + lerp(margin, height - margin, positions[i].position[1]);
 			circleSprite.scale.set(positions[i].radius);
 			circleSprite.tint = colors[i];
 		});

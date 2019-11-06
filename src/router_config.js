@@ -26,6 +26,7 @@ import Stores from "./slides/5/Stores.svelte";
 import StoresCustom from "./slides/5/StoresCustom.svelte";
 
 import History from "./slides/0/History.svelte";
+import Dialup from "./slides/0/Dialup.svelte";
 import Misha from "./slides/0/Misha.svelte";
 
 import Title from "./slides/0/Title.svelte";
@@ -33,9 +34,12 @@ import Title from "./slides/0/Title.svelte";
 import Sham from "./slides/1/Sham.svelte";
 import HTMLStructure from "./slides/1/HTMLStructure.svelte";
 import VirtualDOM from "./slides/1/VirtualDOM.svelte";
+import SunTzu from "./slides/1/SunTzu.svelte";
+
 import Svelte from "./slides/1/Svelte.svelte";
 import SvelterUpdates from "./slides/1/SvelterUpdates.svelte";
 import How from "./slides/1/How.svelte";
+import Compiler from "./slides/2/Compiler.svelte";
 
 import ReactivityChalkboard from "./slides/2/ReactivityChalkboard.svelte";
 import ReactivitySpreadsheet from "./slides/2/ReactivitySpreadsheet.svelte";
@@ -43,30 +47,27 @@ import ReactivityClock from "./slides/2/ReactivityClock.svelte";
 
 export const routes = [
 	// Part 1 - Intro
-	// Part 2 - Updating the DOM
-	// Part 3 - Reactivity
-	["/", RandomDots],
-	["/0-history", History],
+	["/", History],
+	["/0-dialup", Dialup],
 	["/0-momentous", Misha],
 	["/0-title", Title],
 	// Part 1 - Updating the DOM
-	//["/1-shape-model", ShapeModel],
 	["/1-sham", Sham],
 	["/1-html-structure", HTMLStructure],
-	// ["/1-ebbinghaus", Ebbinghaus],
 	["/1-virtual-dom", VirtualDOM],
+	["/1-sun-tzu", SunTzu],
 	["/1-svelte", Svelte],
 	["/1-svelter-updates", SvelterUpdates],
 	["/1-how", How],
 
-	// simplicity / compiler
-	// why being a compiler is good - small bundles, simpler syntax for complex work
-	["/dots", ImageDots],
+	// ["/1-no-rerender", ],
 	// Part 2 - Reactivity
 
 	["/2-reactivity-basics", ReactivityChalkboard],
 	["/2-reactivity-spreadsheet", ReactivitySpreadsheet],
 	["/2-reactivity-clock", ReactivityClock],
+	// Compiler ?
+	["/2-compiler", Compiler],
 	// Part 5 - Svelte API
 	["/5-basics", Basics],
 	["/5-logic-if", LogicEach],
