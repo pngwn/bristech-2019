@@ -12,18 +12,7 @@
 
 	export const next = () => move[current++]();
 
-	const words = [
-		"a ",
-		"very",
-		" short",
-		" but ",
-		"highly",
-		" accurate",
-		" history",
-		" of",
-		" front-end",
-		" development",
-	];
+	const words = ["the", "story", " so", " far "];
 </script>
 
 <div class="container" in:fly={{ opacity: 1, duration: 1000 }}>
@@ -83,6 +72,7 @@
 	.word {
 		display: inline-block;
 		margin: 0 20px;
+		color: #85c1e9;
 	}
 	.highly {
 		color: magenta;

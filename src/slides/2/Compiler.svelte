@@ -62,10 +62,9 @@
 
 	export let done;
 	let quote = false;
-	let dots = false;
+	let dots = true;
 	let current = 0;
 	const move = [
-		() => (dots = true),
 		() => (quote = true),
 		() => {
 			dots = false;
@@ -115,7 +114,6 @@
 					<span>
 						{#each words as word, i}
 							<span
-								class:author={word === '— Sun Tzu'}
 								in:fly={{ duration: 600, y: 60, delay: i * 300 }}
 								out:fade
 								class="word {word}">

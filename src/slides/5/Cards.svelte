@@ -24,6 +24,9 @@
 				s: 1 + 0.05 * (i - 2),
 			})),
 		);
+
+	export let done;
+	export const next = () => done();
 </script>
 
 <div class="bg">
