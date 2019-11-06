@@ -242,9 +242,6 @@
 </div>
 
 <style>
-	:global(body) {
-		background: #000;
-	}
 	.container {
 		position: relative;
 		font-size: 2rem;

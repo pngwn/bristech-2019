@@ -150,6 +150,10 @@
 		background: #222;
 	}
 
+	h1 {
+		transition: 1s;
+	}
+
 	.inner {
 		position: absolute;
 		top: 0;

@@ -62,8 +62,16 @@
 
 	export let done;
 	let quote = false;
+	let dots = false;
 	let current = 0;
-	const move = [() => (quote = true), () => done()];
+	const move = [
+		() => (dots = true),
+		() => (quote = true),
+		() => {
+			dots = false;
+			done();
+		},
+	];
 
 	export const next = () => move[current++]();
 
@@ -87,14 +95,17 @@
 	];
 </script>
 
-<Pixi
-	margin={15}
-	on:click={() => console.log('clicked')}
-	width={meta[0] * 2}
-	height={meta[1] * 2}
-	background="#333">
-	<PixiCircle positions={$pos} colors={col} radius={2.5} fullscreen={true} />
-</Pixi>
+{#if dots}
+
+	<Pixi
+		margin={15}
+		on:click={() => console.log('clicked')}
+		width={meta[0] * 2}
+		height={meta[1] * 2}
+		background="transparent">
+		<PixiCircle positions={$pos} colors={col} radius={2.5} fullscreen={true} />
+	</Pixi>
+{/if}
 
 {#if quote}
 	<div class="container" in:fly={{ opacity: 1, duration: 1000 }}>

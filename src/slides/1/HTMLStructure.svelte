@@ -19,33 +19,33 @@
 	let lines_class = "";
 
 	const node_lines = [
-		`type: h1
+		`node: h1
 children:
     type: text
-    value: 'Hello!'
+    data: 'Hello!'
 `,
-		`type: p
+		`node: p
 children:
     type: text
-    value: 'I am a paragraph!'
+    data: 'I am a paragraph!'
 `,
-		`type: ul
+		`node: ul
 children:
 `,
-		`    type: li
+		`    node: li
     children:
         type: text
-        value: 'Look!!'
+        data: 'Look!'
 `,
-		`    type: li
+		`    node: li
     children:
       type: text
-      value: 'A!'
+      data: 'A!'
 `,
-		`    type: li
+		`    node: li
     children:
         type: text
-        value: 'List!'
+        data: 'List!'
 `,
 	];
 

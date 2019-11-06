@@ -60,59 +60,67 @@
 	export const next = () => move[current++]();
 </script>
 
-<div class="container">
-	{#if title}
-		<Reactivity color="#fff" />
-	{/if}
+<div class="main-container">
 
-	{#if things.houses[0]}
-		<House color="yellow" opacity={house_opacity} />
-	{/if}
+	<div class="container">
+		{#if title}
+			<Reactivity color="#fff" />
+		{/if}
 
-	{#if things.houses[1]}
-		<House color="lime" opacity={house_opacity} />
-	{/if}
+		{#if things.houses[0]}
+			<House color="yellow" opacity={house_opacity} />
+		{/if}
 
-	{#if things.houses[2]}
-		<House color="cyan" opacity={house_opacity} />
-	{/if}
+		{#if things.houses[1]}
+			<House color="lime" opacity={house_opacity} />
+		{/if}
 
-	{#if things.dogs[0]}
-		<Dog color="yellow" position={dog_pos} awoo={things.awoo[0]} />
-	{/if}
+		{#if things.houses[2]}
+			<House color="cyan" opacity={house_opacity} />
+		{/if}
 
-	{#if things.dogs[1]}
-		<Dog color="lime" position={dog_pos} awoo={things.awoo[1]} />
-	{/if}
+		{#if things.dogs[0]}
+			<Dog color="yellow" position={dog_pos} awoo={things.awoo[0]} />
+		{/if}
 
-	{#if things.dogs[2]}
-		<Dog color="cyan" position={dog_pos} awoo={things.awoo[2]} />
-	{/if}
+		{#if things.dogs[1]}
+			<Dog color="lime" position={dog_pos} awoo={things.awoo[1]} />
+		{/if}
 
-	{#if things.circles[0]}
-		<Circle fill={things.active_dog[0]} />
-	{/if}
+		{#if things.dogs[2]}
+			<Dog color="cyan" position={dog_pos} awoo={things.awoo[2]} />
+		{/if}
 
-	{#if things.circles[1]}
-		<Circle color="lime" fill={things.active_dog[1]} />
-	{/if}
+		{#if things.circles[0]}
+			<Circle fill={things.active_dog[0]} />
+		{/if}
 
-	{#if things.circles[2]}
-		<Circle color="cyan" fill={things.active_dog[2]} />
-	{/if}
+		{#if things.circles[1]}
+			<Circle color="lime" fill={things.active_dog[1]} />
+		{/if}
 
-	{#if road}
-		<Road
-			color="#fff"
-			bind:route
-			show_ambulance={ambulance}
-			flash={ambulance_flash}
-			bind:this={road_c} />
-	{/if}
+		{#if things.circles[2]}
+			<Circle color="cyan" fill={things.active_dog[2]} />
+		{/if}
+
+		{#if road}
+			<Road
+				color="#fff"
+				bind:route
+				show_ambulance={ambulance}
+				flash={ambulance_flash}
+				bind:this={road_c} />
+		{/if}
+	</div>
 </div>
 
 <style>
-	:global(body) {
+	.main-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 		background: #000 !important;
 		overflow: hidden;
 	}

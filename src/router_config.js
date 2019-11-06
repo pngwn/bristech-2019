@@ -1,6 +1,6 @@
-import Intro from "./slides/01_Intro.svelte";
-import ImageDots from "./slides/_ImageDots.svelte";
-import RandomDots from "./slides/0/_RandomDots.svelte";
+// import Intro from "./slides/01_Intro.svelte";
+// import ImageDots from "./slides/_ImageDots.svelte";
+// import RandomDots from "./slides/0/_RandomDots.svelte";
 
 import Basics from "./slides/5/Basics.svelte";
 import LogicEach from "./slides/5/LogicEach.svelte";
@@ -39,11 +39,16 @@ import SunTzu from "./slides/1/SunTzu.svelte";
 import Svelte from "./slides/1/Svelte.svelte";
 import SvelterUpdates from "./slides/1/SvelterUpdates.svelte";
 import How from "./slides/1/How.svelte";
+import Things from "./slides/1/Things.svelte";
+
 import Compiler from "./slides/2/Compiler.svelte";
+import Benefits from "./slides/2/Benefits.svelte";
 
 import ReactivityChalkboard from "./slides/2/ReactivityChalkboard.svelte";
 import ReactivitySpreadsheet from "./slides/2/ReactivitySpreadsheet.svelte";
 import ReactivityClock from "./slides/2/ReactivityClock.svelte";
+import Assignment from "./slides/2/Assignment.svelte";
+import AssignmentExample from "./slides/2/AssignmentExample.svelte";
 
 export const routes = [
 	// Part 1 - Intro
@@ -59,15 +64,18 @@ export const routes = [
 	["/1-svelte", Svelte],
 	["/1-svelter-updates", SvelterUpdates],
 	["/1-how", How],
+	["/1-things-to-remember", Things],
 
-	// ["/1-no-rerender", ],
 	// Part 2 - Reactivity
-
+	["/2-assignment", Assignment],
+	["/2-assignment-example", AssignmentExample],
 	["/2-reactivity-basics", ReactivityChalkboard],
 	["/2-reactivity-spreadsheet", ReactivitySpreadsheet],
+
 	["/2-reactivity-clock", ReactivityClock],
 	// Compiler ?
-	["/2-compiler", Compiler],
+	["/2-compiler-benefits", Benefits],
+	["/2-simplicity", Compiler],
 	// Part 5 - Svelte API
 	["/5-basics", Basics],
 	["/5-logic-if", LogicEach],
