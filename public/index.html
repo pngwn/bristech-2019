@@ -13,107 +13,359 @@
 		<link rel="stylesheet" href="/bundle.css" />
 		<link rel="stylesheet" href="/svelte.css" />
 
-		<link rel="preload" href="/files/fira-mono-latin-400.woff" as="font" />
-		<link rel="preload" href="/files/fira-mono-latin-400.woff2" as="font" />
-		<link rel="preload" href="/files/fira-mono-latin-500.woff" as="font" />
-		<link rel="preload" href="/files/fira-mono-latin-500.woff2" as="font" />
-		<link rel="preload" href="/files/fira-mono-latin-700.woff" as="font" />
-		<link rel="preload" href="/files/fira-mono-latin-700.woff2" as="font" />
-
-		<link rel="preload" href="/files/lato-latin-100.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-100.woff2" as="font" />
-		<link rel="preload" href="/files/lato-latin-100italic.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-100italic.woff2" as="font" />
-
-		<link rel="preload" href="/files/lato-latin-300.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-300.woff2" as="font" />
-		<link rel="preload" href="/files/lato-latin-300italic.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-300italic.woff2" as="font" />
-
-		<link rel="preload" href="/files/lato-latin-400.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-400.woff2" as="font" />
-		<link rel="preload" href="/files/lato-latin-400italic.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-400italic.woff2" as="font" />
-
-		<link rel="preload" href="/files/lato-latin-700.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-700.woff2" as="font" />
-		<link rel="preload" href="/files/lato-latin-700italic.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-700italic.woff2" as="font" />
-
-		<link rel="preload" href="/files/lato-latin-900.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-900.woff2" as="font" />
-		<link rel="preload" href="/files/lato-latin-900italic.woff" as="font" />
-		<link rel="preload" href="/files/lato-latin-900italic.woff2" as="font" />
-
-		<link rel="preload" href="/files/overpass-latin-100.woff" as="font" />
-		<link rel="preload" href="/files/overpass-latin-100.woff2" as="font" />
-		<link rel="preload" href="/files/overpass-latin-100italic.woff" as="font" />
 		<link
+			crossorigin="anonymous"
 			rel="preload"
-			href="/files/overpass-latin-100italic.woff2"
+			href="./files/fira-mono-latin-400.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/fira-mono-latin-400.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/fira-mono-latin-500.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/fira-mono-latin-500.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/fira-mono-latin-700.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/fira-mono-latin-700.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-100.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-100.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-100italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-100italic.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-300.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-300.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-300italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-300italic.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-400.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-400.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-400italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-400italic.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-700.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-700.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-700italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-700italic.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-900.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-900.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-900italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/lato-latin-900italic.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-100.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-100.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-100italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-100italic.woff2"
 			as="font"
 		/>
 
-		<link rel="preload" href="/files/overpass-latin-200.woff" as="font" />
-		<link rel="preload" href="/files/overpass-latin-200.woff2" as="font" />
-		<link rel="preload" href="/files/overpass-latin-200italic.woff" as="font" />
 		<link
+			crossorigin="anonymous"
 			rel="preload"
-			href="/files/overpass-latin-200italic.woff2"
+			href="./files/overpass-latin-200.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-200.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-200italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-200italic.woff2"
 			as="font"
 		/>
 
-		<link rel="preload" href="/files/overpass-latin-300.woff" as="font" />
-		<link rel="preload" href="/files/overpass-latin-300.woff2" as="font" />
-		<link rel="preload" href="/files/overpass-latin-300italic.woff" as="font" />
 		<link
+			crossorigin="anonymous"
 			rel="preload"
-			href="/files/overpass-latin-300italic.woff2"
+			href="./files/overpass-latin-300.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-300.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-300italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-300italic.woff2"
 			as="font"
 		/>
 
-		<link rel="preload" href="/files/overpass-latin-400.woff" as="font" />
-		<link rel="preload" href="/files/overpass-latin-400.woff2" as="font" />
-		<link rel="preload" href="/files/overpass-latin-400italic.woff" as="font" />
 		<link
+			crossorigin="anonymous"
 			rel="preload"
-			href="/files/overpass-latin-400italic.woff2"
+			href="./files/overpass-latin-400.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-400.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-400italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-400italic.woff2"
 			as="font"
 		/>
 
-		<link rel="preload" href="/files/overpass-latin-600.woff" as="font" />
-		<link rel="preload" href="/files/overpass-latin-600.woff2" as="font" />
-		<link rel="preload" href="/files/overpass-latin-600italic.woff" as="font" />
 		<link
+			crossorigin="anonymous"
 			rel="preload"
-			href="/files/overpass-latin-600italic.woff2"
+			href="./files/overpass-latin-600.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-600.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-600italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-600italic.woff2"
 			as="font"
 		/>
 
-		<link rel="preload" href="/files/overpass-latin-700.woff" as="font" />
-		<link rel="preload" href="/files/overpass-latin-700.woff2" as="font" />
-		<link rel="preload" href="/files/overpass-latin-700italic.woff" as="font" />
 		<link
+			crossorigin="anonymous"
 			rel="preload"
-			href="/files/overpass-latin-700italic.woff2"
+			href="./files/overpass-latin-700.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-700.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-700italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-700italic.woff2"
 			as="font"
 		/>
 
-		<link rel="preload" href="/files/overpass-latin-800.woff" as="font" />
-		<link rel="preload" href="/files/overpass-latin-800.woff2" as="font" />
-		<link rel="preload" href="/files/overpass-latin-800italic.woff" as="font" />
 		<link
+			crossorigin="anonymous"
 			rel="preload"
-			href="/files/overpass-latin-800italic.woff2"
+			href="./files/overpass-latin-800.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-800.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-800italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-800italic.woff2"
 			as="font"
 		/>
 
-		<link rel="preload" href="/files/overpass-latin-900.woff" as="font" />
-		<link rel="preload" href="/files/overpass-latin-900.woff2" as="font" />
-		<link rel="preload" href="/files/overpass-latin-900italic.woff" as="font" />
 		<link
+			crossorigin="anonymous"
 			rel="preload"
-			href="/files/overpass-latin-900italic.woff2"
+			href="./files/overpass-latin-900.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-900.woff2"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-900italic.woff"
+			as="font"
+		/>
+		<link
+			crossorigin="anonymous"
+			rel="preload"
+			href="./files/overpass-latin-900italic.woff2"
 			as="font"
 		/>
 
