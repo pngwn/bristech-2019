@@ -60,30 +60,30 @@
 
 	let col = _pos.map(({ color }) => color);
 
-	export let done;
-	let quote = false;
+	// let quote = false;
 	let dots = true;
 
-	const words = [
-		"Do",
-		"not",
-		"judge",
-		"the",
-		"intelligence",
-		"of",
-		"a",
-		"developer",
-		"by",
-		"their",
-		"ability",
-		"to",
-		"understand",
-		"low-level",
-		"DOM",
-		"APIs",
-	];
+	// const words = [
+	// 	"Do",
+	// 	"not",
+	// 	"judge",
+	// 	"the",
+	// 	"intelligence",
+	// 	"of",
+	// 	"a",
+	// 	"developer",
+	// 	"by",
+	// 	"their",
+	// 	"ability",
+	// 	"to",
+	// 	"understand",
+	// 	"low-level",
+	// 	"DOM",
+	// 	"APIs",
+	// ];
 
-	export const steps = [() => (quote = true), () => (dots = false)];
+	// export const steps = [() => (quote = true), () => (dots = false)];
+	export const steps = false;
 </script>
 
 {#if dots}
@@ -98,7 +98,7 @@
 	</Pixi>
 {/if}
 
-{#if quote}
+<!-- {#if quote}
 	<div class="container" in:fly={{ opacity: 1, duration: 1000 }}>
 		{#if quote}
 			<div class="inner">
@@ -119,7 +119,7 @@
 			</div>
 		{/if}
 	</div>
-{/if}
+{/if} -->
 
 <style>
 	h1 {

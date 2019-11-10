@@ -28,7 +28,7 @@ import Title from "./slides/0/Title.svelte";
 import Sham from "./slides/1/Sham.svelte";
 import HTMLStructure from "./slides/1/HTMLStructure.svelte";
 import VirtualDOM from "./slides/1/VirtualDOM.svelte";
-import SunTzu from "./slides/1/SunTzu.svelte";
+// import SunTzu from "./slides/1/SunTzu.svelte";
 
 import Svelte from "./slides/1/Svelte.svelte";
 import SvelterUpdates from "./slides/1/SvelterUpdates.svelte";
@@ -86,4 +86,6 @@ export const routes = [
 	["/5-follow", Follow],
 	["/5-cards", Cards],
 	["/5-the-end", More],
+	[],
+	["/bonus", Compiler],
 ];
