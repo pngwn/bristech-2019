@@ -20,8 +20,6 @@
 		}
 	};
 
-	$: console.log(step, steps);
-
 	const on_right = (node, cb) => {
 		const handle_down = ({ which }) => {
 			if (which === 39) cb();
