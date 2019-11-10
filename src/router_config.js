@@ -1,7 +1,3 @@
-// import Intro from "./slides/01_Intro.svelte";
-// import ImageDots from "./slides/_ImageDots.svelte";
-// import RandomDots from "./slides/0/_RandomDots.svelte";
-
 import Basics from "./slides/5/Basics.svelte";
 import LogicEach from "./slides/5/LogicEach.svelte";
 import LogicIf from "./slides/5/LogicIf.svelte";
@@ -26,7 +22,6 @@ import StoresCustom from "./slides/5/StoresCustom.svelte";
 
 import History from "./slides/0/History.svelte";
 import Dialup from "./slides/0/Dialup.svelte";
-import Misha from "./slides/0/Misha.svelte";
 
 import Title from "./slides/0/Title.svelte";
 
@@ -50,12 +45,8 @@ import Assignment from "./slides/2/Assignment.svelte";
 import AssignmentExample from "./slides/2/AssignmentExample.svelte";
 
 export const routes = [
-	// Part 1 - Intro
-	["/", History],
-	// ["/0-dialup", Dialup],
-	// ["/0-momentous", Misha],
-
 	// Part 1 - Updating the DOM
+	["/", History],
 	["/1-sham", Sham],
 	["/1-html-structure", HTMLStructure],
 	["/1-virtual-dom", VirtualDOM],
@@ -73,9 +64,8 @@ export const routes = [
 	["/2-reactivity-spreadsheet", ReactivitySpreadsheet],
 
 	["/2-reactivity-clock", ReactivityClock],
-	// Compiler ?
 	["/2-compiler-benefits", Benefits],
-	["/2-simplicity", Compiler],
+	// ["/2-simplicity", Compiler],
 	// Part 5 - Svelte API
 	["/5-basics", Basics],
 	["/5-logic-if", LogicEach],
@@ -92,12 +82,8 @@ export const routes = [
 	["/5-animate", Animate],
 	["/5-stores", Stores],
 	// ["/5-stores-custom", StoresCustom],
-	// ["/5-tweened", Tweened],
 	["/5-ebbinghaus", Ebbinghaus],
-	// ["/5-spring", Spring],
 	["/5-follow", Follow],
 	["/5-cards", Cards],
 	["/5-the-end", More],
-
-	// Outro - Resources and Me
 ];

@@ -2,8 +2,7 @@
 	import Spreadsheet from "../../comp/Spreadsheet.svelte";
 	let checked = false;
 
-	export let done;
-	export const next = () => done();
+	export const steps = false;
 </script>
 
 <div class="container">

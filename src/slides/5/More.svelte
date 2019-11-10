@@ -1,23 +1,18 @@
 <script>
 	import { fade, fly } from "svelte/transition";
 
-	export let done;
-	let current = 0;
-
 	let show = false;
 	let phrases = [];
 	let phrases_2 = [];
-	const move = [
-		() => (phrases = [...phrases, "svelte.dev/docs/"]),
+
+	export const steps = [
+		() => (phrases = [...phrases, "svelte.dev/docs"]),
 		() => (phrases = [...phrases, "svelte.dev/chat"]),
 		() => (phrases = [...phrases, "svelte.dev/tutorial"]),
 		() => (phrases = [...phrases, "svelte.dev/repl"]),
 		() => (phrases_2 = [...phrases_2, "github.com/pngwn"]),
 		() => (phrases_2 = [...phrases_2, "twitter.com/evilpingwin"]),
-		() => done(),
 	];
-
-	export const next = () => move[current++]();
 </script>
 
 <div class="container">

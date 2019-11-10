@@ -3,17 +3,14 @@
 	import Editor from "../../comp/Editor.svelte";
 	import VDOM from "../../comp/VDOM.svelte";
 
-	export let done;
-
-	export function next() {
-		done();
-	}
-
 	let heading = "Hello friends";
 	let paragraph = "I am a document.";
 	let list = "Look\na list";
-	$: list_length = list.split("\n").length;
 	let clicks = 0;
+
+	$: list_length = list.split("\n").length;
+
+	export const steps = false;
 </script>
 
 <div class="container">
@@ -29,9 +26,6 @@
 </div>
 
 <style>
-	:global(body) {
-		background: #222;
-	}
 	.container {
 		position: absolute;
 		top: 0;
@@ -41,6 +35,7 @@
 		height: 100vh;
 		width: 100vw;
 		background: #333;
+		overflow: hidden;
 	}
 	.box {
 		display: grid;

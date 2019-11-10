@@ -2,8 +2,7 @@
 	import Repl from "../../comp/Repl.svelte";
 	import content from "../../samples/events/";
 
-	export let done;
-	export const next = () => done();
+	export const steps = false;
 </script>
 
 <Repl {content} />

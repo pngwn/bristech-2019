@@ -3,14 +3,8 @@
 
 	import { fade, fly } from "svelte/transition";
 
-	export let done;
-	let current = 0;
-
 	let show = false;
 
-	const move = [() => (show = true), () => done()];
-
-	export const next = () => move[current++]();
 	const source_text = [
 		[
 			{ color: "purple", text: "props", l: 0 },
@@ -35,7 +29,7 @@
 		purple: "#bf9fff",
 	};
 
-	console.log("boo");
+	export const steps = [() => (show = true)];
 </script>
 
 <div class="container" in:fly={{ opacity: 1, duration: 1000 }}>

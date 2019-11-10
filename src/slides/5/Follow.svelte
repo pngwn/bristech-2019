@@ -1,9 +1,6 @@
 <script>
 	import { spring } from "svelte/motion";
 
-	export let done;
-	export const next = () => done();
-
 	const init = Array(5)
 		.fill(0)
 		.map((v, i) => ({ x: 50, y: 50 }));
@@ -17,6 +14,8 @@
 		springs.update(v => {
 			return v.map((c, i) => (i === 0 ? c : $springs[i - 1]));
 		});
+
+	export const steps = false;
 </script>
 
 <svg

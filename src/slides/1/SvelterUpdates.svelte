@@ -1,16 +1,10 @@
 <script>
 	import { onMount, tick } from "svelte";
 	import { fade, fly } from "svelte/transition";
+	import { typewriter } from "~actions";
 
 	let source = false;
 	let output = false;
-
-	export let done;
-	let current = 0;
-
-	const move = [() => (source = true), () => (output = true), () => done()];
-
-	export const next = () => move[current++]();
 
 	const source_text = [
 		[
@@ -58,10 +52,6 @@
 		],
 		[{ color: "grey", text: "}", l: 48 }],
 	];
-	// if (changed.name) {
-	// 	text.data = `Hello ${name}`;
-	// }
-	// const outp;
 
 	const colors = {
 		yellow: "#fdfd96",
@@ -73,23 +63,7 @@
 		orange: "darkorange",
 	};
 
-	function typewriter(node, { speed = 50, delay }) {
-		const valid =
-			node.childNodes.length === 1 && node.childNodes[0].nodeType === 3;
-		if (!valid) return {};
-
-		const text = node.textContent;
-		const duration = text.length * speed;
-
-		return {
-			duration,
-			delay,
-			tick: (t, u) => {
-				const i = ~~(text.length * t);
-				node.textContent = text.slice(0, i);
-			},
-		};
-	}
+	export const steps = [() => (source = true), () => (output = true)];
 </script>
 
 <div class="container" in:fly={{ opacity: 1, duration: 1000 }}>

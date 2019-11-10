@@ -1,21 +1,17 @@
 <script>
 	import { scale, fade } from "svelte/transition";
 	import { elasticOut } from "svelte/easing";
-	export let done;
-	let current = 0;
 
 	let show = false;
 	let phrase_1 = "";
 	let phrase_2 = "";
 	let phrase_3 = "";
-	const move = [
+
+	export const steps = [
 		() => (phrase_1 = "="),
 		() => (phrase_2 = "+="),
 		() => (phrase_3 = "++"),
-		() => done(),
 	];
-
-	export const next = () => move[current++]();
 </script>
 
 <div class="container">

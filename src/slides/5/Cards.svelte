@@ -1,4 +1,8 @@
 <script>
+	// adapted from:
+	// paul henschel @0xca0a
+	// https://twitter.com/0xca0a/status/1143979773749862402
+
 	import { spring_group } from "./spring_group.js";
 	import { gesture } from "./useGesture.js";
 
@@ -25,8 +29,7 @@
 			})),
 		);
 
-	export let done;
-	export const next = () => done();
+	export const steps = false;
 </script>
 
 <div class="bg">

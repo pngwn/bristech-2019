@@ -1,11 +1,8 @@
 <script>
 	import { GlobeIcon } from "svelte-feather-icons";
 	import { onDestroy } from "svelte";
-	export let done;
 
 	let show = false;
-
-	export const next = done;
 
 	const a = new Audio("/images/dialup.mp3");
 	let faded;

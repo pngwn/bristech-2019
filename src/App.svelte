@@ -6,11 +6,21 @@
 
 	const { component, destroy, route, current } = router(routes);
 
-	let comp;
+	let steps;
+	let step = 0;
 
 	onDestroy(destroy);
 
-	const done = () => route(routes[current() + 1][0]);
+	const next = () => {
+		if (!steps || !steps[step]) {
+			route(routes[current() + 1][0]);
+			step = 0;
+		} else {
+			steps[step++]();
+		}
+	};
+
+	$: console.log(step, steps);
 
 	const on_right = (node, cb) => {
 		const handle_down = ({ which }) => {
@@ -27,6 +37,6 @@
 	};
 </script>
 
-<svelte:window use:on_right={() => comp.next()} />
+<svelte:window use:on_right={next} />
 
-<svelte:component this={$component} bind:this={comp} {done} />
+<svelte:component this={$component} bind:steps />

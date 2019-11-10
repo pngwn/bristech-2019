@@ -50,22 +50,15 @@ children:
 	];
 
 	$: filtered_lines = lines.filter(v => v[3]);
-
 	$: visual_lines = lines.map(([p, e]) => [["", p[1], ""], e]);
-
 	$: html_lines = visual_lines;
 
-	export let done;
-
-	let current = 0;
-	const move = [
+	export const steps = [
 		() => (visual = true),
 		() => (html = true),
 		() => (dom = true),
 		() => (lines_class = "with-lines"),
-		() => done(),
 	];
-	export const next = () => move[current++]();
 </script>
 
 <div class="container">

@@ -6,8 +6,6 @@
 	import Ambulance from "../../comp/Drawings/Ambulance.svelte";
 	import Circle from "../../comp/Drawings/Circle.svelte";
 
-	export let done;
-
 	let things = {
 		houses: Array(3).fill(false),
 		dogs: Array(3).fill(false),
@@ -34,9 +32,9 @@
 		}, time);
 	};
 
-	let current = 0;
+	const timer = delay => new Promise(res => setTimeout(res, delay));
 
-	const move = [
+	export const steps = [
 		() => (title = true),
 		() => stagger_things("houses", 3, 4000),
 		() => stagger_things("dogs", 3, 3000),
@@ -49,15 +47,13 @@
 		() => stagger_things("circles", 3, 1000),
 		() => (ambulance_flash = true),
 		() => road_c.drive(0.25),
-		() => (
+		async () => (
 			stagger_things("active_dog", 3, 5000),
-			setTimeout(() => stagger_things("awoo", 3, 5000), 4000),
+			await timer(4000),
+			() => stagger_things("awoo", 3, 5000),
 			road_c.drive(1)
 		),
-		() => done(),
 	];
-
-	export const next = () => move[current++]();
 </script>
 
 <div class="main-container">

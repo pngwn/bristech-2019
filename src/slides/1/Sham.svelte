@@ -39,24 +39,30 @@
 	let sync = { show: false, p: -120, r: 0 };
 	let sync_status = "";
 
-	export let done;
-
 	const timer = delay => new Promise(res => setTimeout(res, delay));
 
-	let current = 0;
-	const move = [
+	const letter_in = (node, { delay }) => ({
+		delay,
+		duration: 0,
+		css: t => `opacity: ${t};`,
+	});
+
+	let w;
+
+	export const steps = [
 		() => {
 			shapes_pos.y = 300;
 			show_sham = true;
 		},
-		() => {
+		async () => {
 			sham_letters = [
 				{ l: "S", id: 3 },
 				{ l: "h", id: 4 },
 				{ l: "a", id: 5 },
 				{ l: "M", id: 8 },
 			];
-			setTimeout(() => (sham_width = 300), 800);
+			await timer(800);
+			sham_width = 300;
 		},
 		() => (sham_obj_show = true),
 		() => (sham_obj[1] = ["Hexagon", "Magenta", id++]),
@@ -66,46 +72,6 @@
 			await timer(1000);
 			show_v_sham = true;
 		},
-
-		// () => (v_sham_obj[1] = ["Square", "Orange", id++]),
-		// () => (sync.show = true),
-		// async () => {
-		// 	sync.r = 720;
-		// 	await timer(5000);
-		// 	sync_status = "match";
-		// },
-		// () => (sham_obj[0][3] = "same"),
-		// async () => {
-		// 	sync.p = -20;
-		// 	await timer(5000);
-		// 	sync.r += 720;
-		// 	await timer(5000);
-		// 	sync_status = "dirty";
-		// },
-		// () => (sham_obj[1][3] = "change"),
-		// async () => {
-		// 	sync.p = 85;
-		// 	await timer(5000);
-		// 	sync.r += 720;
-		// 	await timer(5000);
-		// 	sync_status = "match";
-		// },
-		// async () => {
-		// 	sham_obj[2][3] = "same";
-		// 	sync.show = false;
-		// 	await timer(1000);
-		// 	sync.p = -120;
-		// 	sync_status = "";
-		// },
-		// () => {
-		// 	sham_obj[0][3] = "";
-		// 	sham_obj[1] = ["Square", "Orange", id++, ""];
-		// 	sham_obj[2][3] = "";
-		// },
-		// () => {
-		// 	shapes[1] = { comp: SquareIcon, color: "orange", id: id++ };
-		// },
-		// and again
 		() => {
 			v_sham_obj[0] = ["Hexagon", "Green", id++];
 			v_sham_obj[2] = ["Hexagon", "Magenta", id++];
@@ -145,21 +111,8 @@
 		() => (shapes[0] = { comp: HexagonIcon, color: "limegreen", id: id++ }),
 		() => (shapes[2].color = "magenta"),
 
-		// end
-		() => done(),
-
 		// oh boy
 	];
-
-	const letter_in = (node, { delay }) => ({
-		delay,
-		duration: 0,
-		css: t => `opacity: ${t};`,
-	});
-
-	export const next = () => move[current++]();
-
-	let w;
 </script>
 
 <svelte:window bind:innerWidth={w} />

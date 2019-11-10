@@ -1,21 +1,16 @@
 <script>
 	import { fade, fly } from "svelte/transition";
 
-	export let done;
-	let current = 0;
-
 	let show = false;
 	let phrase_1 = "";
 	let phrase_2 = "";
 	let phrase_3 = "";
-	const move = [
+
+	export const steps = [
 		() => (phrase_1 = "Smaller bundles"),
 		() => (phrase_2 = "Rich feature set"),
 		() => (phrase_3 = "Simplicity"),
-		() => done(),
 	];
-
-	export const next = () => move[current++]();
 </script>
 
 <div class="container">

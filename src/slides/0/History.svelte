@@ -1,18 +1,11 @@
 <script>
 	import { typewriter } from "~actions";
-
 	import { fade, fly } from "svelte/transition";
 
-	export let done;
-	let current = 0;
-
 	let show = false;
-
-	const move = [() => (show = true), () => done()];
-
-	export const next = () => move[current++]();
-
 	const words = ["the", "story", " so", " far "];
+
+	export const steps = [() => (show = true)];
 </script>
 
 <div class="container" in:fly={{ opacity: 1, duration: 1000 }}>

@@ -63,16 +63,6 @@
 	export let done;
 	let quote = false;
 	let dots = true;
-	let current = 0;
-	const move = [
-		() => (quote = true),
-		() => {
-			dots = false;
-			done();
-		},
-	];
-
-	export const next = () => move[current++]();
 
 	const words = [
 		"Do",
@@ -92,6 +82,8 @@
 		"DOM",
 		"APIs",
 	];
+
+	export const steps = [() => (quote = true), () => (dots = false)];
 </script>
 
 {#if dots}

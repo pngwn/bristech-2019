@@ -11,21 +11,6 @@
 	let active_2 = false;
 	let active_3 = false;
 
-	export let done;
-	let current = 0;
-
-	const move = [
-		() => (title = true),
-		() => (title_pos = 100),
-		() => (source = true),
-		() => (active_1 = true),
-		() => (active_2 = true),
-		() => (active_3 = true),
-		() => done(),
-	];
-
-	export const next = () => move[current++]();
-
 	const source_text = [
 		[
 			{ color: "teal", text: "<", l: 0 },
@@ -107,6 +92,15 @@
 			(i === 4 && j === 2 && c)
 		);
 	};
+
+	export const steps = [
+		() => (title = true),
+		() => (title_pos = 100),
+		() => (source = true),
+		() => (active_1 = true),
+		() => (active_2 = true),
+		() => (active_3 = true),
+	];
 </script>
 
 <div class="container" in:fly={{ opacity: 1, duration: 1000 }}>

@@ -8,10 +8,7 @@
 	let comp_fw = false;
 	let bad_bitch = false;
 
-	export let done;
-	let current = 0;
-
-	const move = [
+	export const steps = [
 		() => {
 			logo = true;
 			setTimeout(() => (type = true), 1500);
@@ -19,10 +16,7 @@
 		() => (reposition = true),
 		() => (comp_fw = true),
 		() => (bad_bitch = true),
-		() => done(),
 	];
-
-	export const next = () => move[current++]();
 </script>
 
 <div class="container">
