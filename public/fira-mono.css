@@ -2,7 +2,7 @@
 @font-face {
 	font-family: "Fira Mono";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 400;
 	src: local("Fira Mono Regular "), local("Fira Mono-Regular"),
 		url("./files/fira-mono-latin-400.woff2") format("woff2"),
@@ -14,7 +14,7 @@
 @font-face {
 	font-family: "Fira Mono";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 500;
 	src: local("Fira Mono Medium "), local("Fira Mono-Medium"),
 		url("./files/fira-mono-latin-500.woff2") format("woff2"),
@@ -26,7 +26,7 @@
 @font-face {
 	font-family: "Fira Mono";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 700;
 	src: local("Fira Mono Bold "), local("Fira Mono-Bold"),
 		url("./files/fira-mono-latin-700.woff2") format("woff2"),

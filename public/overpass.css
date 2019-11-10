@@ -2,7 +2,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 100;
 	src: local("Overpass Thin "), local("Overpass-Thin"),
 		url("./files/overpass-latin-100.woff2") format("woff2"),
@@ -14,7 +14,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 100;
 	src: local("Overpass Thin italic"), local("Overpass-Thinitalic"),
 		url("./files/overpass-latin-100italic.woff2") format("woff2"),
@@ -26,7 +26,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 200;
 	src: local("Overpass Extra Light "), local("Overpass-Extra Light"),
 		url("./files/overpass-latin-200.woff2") format("woff2"),
@@ -38,7 +38,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 200;
 	src: local("Overpass Extra Light italic"), local("Overpass-Extra Lightitalic"),
 		url("./files/overpass-latin-200italic.woff2") format("woff2"),
@@ -50,7 +50,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 300;
 	src: local("Overpass Light "), local("Overpass-Light"),
 		url("./files/overpass-latin-300.woff2") format("woff2"),
@@ -62,7 +62,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 300;
 	src: local("Overpass Light italic"), local("Overpass-Lightitalic"),
 		url("./files/overpass-latin-300italic.woff2") format("woff2"),
@@ -74,7 +74,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 400;
 	src: local("Overpass Regular "), local("Overpass-Regular"),
 		url("./files/overpass-latin-400.woff2") format("woff2"),
@@ -86,7 +86,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 400;
 	src: local("Overpass Regular italic"), local("Overpass-Regularitalic"),
 		url("./files/overpass-latin-400italic.woff2") format("woff2"),
@@ -98,7 +98,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 600;
 	src: local("Overpass SemiBold "), local("Overpass-SemiBold"),
 		url("./files/overpass-latin-600.woff2") format("woff2"),
@@ -110,7 +110,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 600;
 	src: local("Overpass SemiBold italic"), local("Overpass-SemiBolditalic"),
 		url("./files/overpass-latin-600italic.woff2") format("woff2"),
@@ -122,7 +122,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 700;
 	src: local("Overpass Bold "), local("Overpass-Bold"),
 		url("./files/overpass-latin-700.woff2") format("woff2"),
@@ -134,7 +134,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 700;
 	src: local("Overpass Bold italic"), local("Overpass-Bolditalic"),
 		url("./files/overpass-latin-700italic.woff2") format("woff2"),
@@ -146,7 +146,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 800;
 	src: local("Overpass ExtraBold "), local("Overpass-ExtraBold"),
 		url("./files/overpass-latin-800.woff2") format("woff2"),
@@ -158,7 +158,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 800;
 	src: local("Overpass ExtraBold italic"), local("Overpass-ExtraBolditalic"),
 		url("./files/overpass-latin-800italic.woff2") format("woff2"),
@@ -170,7 +170,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 900;
 	src: local("Overpass Black "), local("Overpass-Black"),
 		url("./files/overpass-latin-900.woff2") format("woff2"),
@@ -182,7 +182,7 @@
 @font-face {
 	font-family: "Overpass";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 900;
 	src: local("Overpass Black italic"), local("Overpass-Blackitalic"),
 		url("./files/overpass-latin-900italic.woff2") format("woff2"),

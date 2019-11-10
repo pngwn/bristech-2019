@@ -2,7 +2,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 100;
 	src: local("Lato Thin "), local("Lato-Thin"),
 		url("./files/lato-latin-100.woff2") format("woff2"),
@@ -14,7 +14,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 100;
 	src: local("Lato Thin italic"), local("Lato-Thinitalic"),
 		url("./files/lato-latin-100italic.woff2") format("woff2"),
@@ -26,7 +26,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 300;
 	src: local("Lato Light "), local("Lato-Light"),
 		url("./files/lato-latin-300.woff2") format("woff2"),
@@ -38,7 +38,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 300;
 	src: local("Lato Light italic"), local("Lato-Lightitalic"),
 		url("./files/lato-latin-300italic.woff2") format("woff2"),
@@ -50,7 +50,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 400;
 	src: local("Lato Regular "), local("Lato-Regular"),
 		url("./files/lato-latin-400.woff2") format("woff2"),
@@ -62,7 +62,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 400;
 	src: local("Lato Regular italic"), local("Lato-Regularitalic"),
 		url("./files/lato-latin-400italic.woff2") format("woff2"),
@@ -74,7 +74,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 700;
 	src: local("Lato Bold "), local("Lato-Bold"),
 		url("./files/lato-latin-700.woff2") format("woff2"),
@@ -86,7 +86,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 700;
 	src: local("Lato Bold italic"), local("Lato-Bolditalic"),
 		url("./files/lato-latin-700italic.woff2") format("woff2"),
@@ -98,7 +98,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 	font-weight: 900;
 	src: local("Lato Black "), local("Lato-Black"),
 		url("./files/lato-latin-900.woff2") format("woff2"),
@@ -110,7 +110,7 @@
 @font-face {
 	font-family: "Lato";
 	font-style: italic;
-	font-display: block;
+	font-display: swap;
 	font-weight: 900;
 	src: local("Lato Black italic"), local("Lato-Blackitalic"),
 		url("./files/lato-latin-900italic.woff2") format("woff2"),
