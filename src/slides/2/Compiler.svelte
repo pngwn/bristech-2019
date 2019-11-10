@@ -90,7 +90,6 @@
 
 	<Pixi
 		margin={15}
-		on:click={() => console.log('clicked')}
 		width={meta[0] * 2}
 		height={meta[1] * 2}
 		background="transparent">
