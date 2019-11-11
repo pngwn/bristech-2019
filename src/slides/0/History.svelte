@@ -27,6 +27,12 @@
 
 		</div>
 	{/if}
+	<div class="overlay">
+		<p>
+			Desktop only. Move forwards with the right arrow key. Move to a previous
+			screen using the browser back button.
+		</p>
+	</div>
 </div>
 
 <style>
@@ -81,5 +87,28 @@
 	.front-end,
 	.development {
 		color: #85c1e9;
+	}
+
+	.overlay {
+		position: absolute;
+		background: #fff;
+		opacity: 0.7;
+		bottom: 20px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 50%;
+		font-size: 2.5rem;
+		padding: 20px 20px 0 20px;
+		border-radius: 5px;
+		font-family: "Lato";
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.overlay {
+			width: 90%;
+			font-size: 2rem;
+		}
 	}
 </style>
