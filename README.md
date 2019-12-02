@@ -1,6 +1,6 @@
 **Rerendering Perceptions with Svelte** - _Bristech 2019_
 
-This is the source of the slides for a talk I gave at Bristech 2019. They are available onlie at [rerendering-perceptions.netlify.com](https://rerendering-perceptions.netlify.com/).
+This is the source of the slides for a talk I gave at Bristech 2019. They are available onlie at [rerendering-perceptions.netlify.com](https://rerendering-perceptions.netlify.com/). You can [watch the talk video here](https://www.youtube.com/watch?v=fUfsHKR6X9s).
 
 They are designed only for desktop and are really designed to work woth Chrome's full-screen mode (ctrl+cmd+f on a mac) although this only matters for one or two slides.
 
